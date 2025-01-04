@@ -48,7 +48,7 @@ pipeline {
         }
         stage('Trigger ManifestUpdate') {
              steps{
-                build job: 'sample-app-manifest', parameters: [string(name: 'IMAGETAG', value: env.BUILD_NUMBER)]     
+                build job: 'blog-nodejs-rollout', parameters: [string(name: 'IMAGETAG', value: env.BUILD_NUMBER)]     
 
             } 
            } 
